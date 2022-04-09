@@ -23,12 +23,12 @@ use Inertia\Inertia;
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
 //route index register
-Route::get('/regoster', [\App\Http\Controllers\Auth\RegisterController::class, 'index']);
+Route::get('/register', [\App\Http\Controllers\Auth\RegisterController::class, 'index']);
 //route store register
 Route::post('/register', [\App\Http\Controllers\Auth\RegisterController::class, 'store']);
 
 //route index login
-Route::get('/', [\App\Http\Controllers\Auth\LoginController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\Auth\LoginController::class, 'index'])->name('login');
 
 //route store login
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'store']);

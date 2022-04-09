@@ -17,7 +17,12 @@
             <li class="nav-item">
               <a class="nav-link" href="https://santrikoding.com/tutorial-set" target="_blank">TUTORIAL SET</a>
             </li>
+            <li class="nav-item">
+              <inertia-link class="nav-link" href="/logout" method="post">LOGOUT</inertia-link>
+            </li>
           </ul>
+          
+
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-success" type="submit">Search</button>
@@ -33,9 +38,22 @@
 </template>
 
 <script>
-  export default {
 
-  }
+    //import Link dari inertia
+    import { Link } from '@inertiajs/inertia-vue3';
+
+    export default {
+
+        //register Link di component
+        components: {
+            Link
+        },
+
+        props: {
+            auth: Object
+        }
+
+    }
 </script>
 
 <style scoped>

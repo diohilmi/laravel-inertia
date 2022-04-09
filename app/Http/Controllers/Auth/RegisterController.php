@@ -47,6 +47,6 @@ class RegisterController extends Controller
         ]);
 
         //redirect
-        return redirect('/login')->with('status', 'Register Berhasil!');
+        return redirect('/')->with('status', 'Register Berhasil!');
     }
 }
